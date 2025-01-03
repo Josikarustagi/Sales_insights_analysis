@@ -38,6 +38,8 @@ FROM sales.transactions
 where market_code = 'Mark001';
 
 
+SELECT count(*) from transactions where transactions.currency = 'INR\r';
+
 SELECT sum(t.sales_amount)FROM transactions as t INNER JOIN date as d
 ON t.order_date=d.date where d.year=2020 and t.currency="INR\r" or t.currency="USD\r";
 
